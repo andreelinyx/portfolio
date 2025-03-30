@@ -4,12 +4,15 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
         <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" href="images/pompom.png" type="image/png">
 
         <title>Andree's Portfolio</title>
 
@@ -40,23 +43,174 @@
         </nav>
 
         <main>
-            <!--SECTION 1: Hero-->
-            <section></section>
-
+            <!--SECTION 1: About me-->
+            <section id="aboutme">
+                <h1 id="aboutme_text"><strong>hello! <br> 
+                    welcome to andree's portfolio</strong></h1>
+                <h3 id="aboutme_text">allow me to introduce myself.</h3>
+                <img src="images/icon.jpg" alt="pfp">
+            </section>
+            
             <!--SECTION 2: Skills-->
-            <section id="skills"></section>
+            <section id="skills">
+                <h1>My Skills</h1>
+                <h3>Programming Languages and Technology</h3>
 
+                <div class="wrapper">
+                    <i id="left" class="fa-solid fa-angle-left"></i>
+                    <ul class="carousel">
+                        <!--JAVA-->
+                        <li class="card">
+                            <img src="images/snoopy1.png" alt="s1" draggable="false" class="simg">
+                            <h2 class="skill">Java</h2>
+                            <p class="sdescription">Used in OOP and <br>data structures college courses</p>
+                        </li>
+
+                        <!--MySQL-->
+                        <li class="card">
+                            <img src="images/snoopy2.png" alt="s2" draggable="false" class="simg">
+                            <h2 class="skill">MySQL</h2>
+                            <p class="sdescription">Used in database management <br>college course</p>
+                        </li>               
+
+                        <!--HTML-->
+                        <li class="card">
+                            <img src="images/snoopy3.png" alt="s3" draggable="false" class="simg">
+                            <h2 class="skill">HTML</h2>
+                            <p class="sdescription">Self learned through projects</p>
+                        </li>
+
+                        <!--CSS-->
+                        <li class="card">
+                            <img src="images/snoopy4.png" alt="s4" draggable="false" class="simg">
+                            <h2 class="skill">CSS</h2>
+                            <p class="sdescription">Self learned through projects</p>
+                        </li>
+
+                        <!--JavaScript-->
+                        <li class="card">
+                            <img src="images/snoopy5.png" alt="s5" draggable="false" class="simg">
+                            <h2 class="skill">JavaScript</h2>
+                            <p class="sdescription">Self learned through projects</p>
+                        </li>
+
+
+                        <!--C-->
+                        <li class="card">
+                            <img src="images/snoopy6.png" alt="s6" draggable="false" class="simg">
+                            <h2 class="skill">C</h2>
+                            <p class="sdescription">Used in computer architecture <br>college course</p>
+                        </li>
+                    </ul>
+
+                    <i id="right" class="fa-solid fas fa-angle-right"></i>
+                </div>
+
+            </section>
+
+            
             <!--SECTION 3: Projects-->
-            <section id="projects"></section>
+            <section id="projects">
+                <h1>Projects</h1>
+                <h3>Cool stuff I've been working on</h3>
+                <div class="projects-container">
+                    <div class="portfolio">
+                        <img src="images/nekoatsume1.jpeg" alt="n1" draggable="false" class="pimg">
+
+                        <h2 class="project">This website!</h2>
+                        <p class="pdescription">Technology used:</p>
+                        <ul>
+                            <li>Programming language: HTML, CSS, JavaScript</li>
+                            <li>Framework: Angular</li>
+                        </ul>
+                        <button>View on GitHub</button>
+                    </div>
+
+                    <div class="valentine">
+                        <img src="images/nekoatsume2.jpeg" alt="n1" draggable="false" class="pimg">
+                        <h2 class="project">Valentine's day website</h2>
+                        <p class="pdescription">Technology used:</p>
+                        <ul>
+                            <li>Programming language: HTML, CSS, JavaScript</li>
+                            <li>Framework: Angular</li>
+                        </ul>
+                        <button>View on GitHub</button>
+                    </div>
+
+                    <div class="database">
+                        <img src="images/nekoatsume3.jpeg" alt="n1" draggable="false" class="pimg">
+                        <h2 class="project">Academic project - database</h2>
+                        <p class="pdescription">Technology used:</p>
+                        <ul>
+                            <li>Programming language: Java, MySQL</li>
+                            <li>Other tech: GitHub</li>
+                        </ul>
+                        <button>View on GitHub</button>
+                    </div>
+                </div>
+            </section>
 
             <!--SECTION 4: Experience-->
-            <section id="experience"></section>
+            <section id="experience">
+                <h1>Experience</h1>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h2>Social Media Manager - CS Department</h2>
+                            <p>Managed official social media accounts, created content, and engaged with students.</p>
+                            <span class="date">2024 - Present</span>
+                        </div>
+                    </div>
+            
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h2>Peer Tutor - Computer Science</h2>
+                            <p>Assisted students with Java, data structures, and algorithms.</p>
+                            <span class="date">2023 - 2024</span>
+                        </div>
+                    </div>
+            
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h2>Intern - Software Development</h2>
+                            <p>Developed full-stack applications and worked on database optimization.</p>
+                            <span class="date">2022</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
 
             <!--SECTION 5: Education-->
-            <section id="education"></section>
+            <section id="education">
+                <h1>Education</h1>
+                <div class="education-item">
+                    <h2>Bachelor of Science in Computer Science</h2>
+                    <p><strong>University of Wisconsin-La Crosse</strong></p>
+                    <p><em>Expected Graduation: May 2025</em></p>
+                    <p>Relevant coursework: Data Structures, Algorithms, Web Development, Database Management, and Software Engineering.</p>
+                </div>
 
-            <!--SECTION 6: Contact-->
-            <section id="contact"></section>
+                <div class="education-item">
+                    <h2>High School Diploma</h2>
+                    <p><strong>XYZ High School</strong></p>
+                    <p><em>Graduated: June 2021</em></p>
+                    <p>GPA: 4.0, President of Computer Science Club, Captain of the Robotics Team.</p>
+                </div>
+            </section>
+
+
+            <!-- Footer -->
+            <footer>
+                <p>&copy; Thank you for checking out my website! Here is more information about me.</p>
+                
+                <p>Download my <a href="Andree_Resume.pdf" target="_blank">Resume</a></p>
+                
+                <p>Contact me at: <a href="andree.linyx@gmail.com"></a></p>
+
+                <p>Follow me on <a href="https://www.linkedin.com/in/andree-lin-56196a284/" target="_blank">LinkedIn</a> | <a href="https://github.com/andreelinyx" target="_blank">GitHub</a></p>
+            </footer>
+
 
 
         </main>
