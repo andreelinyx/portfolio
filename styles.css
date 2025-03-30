@@ -2,12 +2,14 @@
      --text-color: #1a1c20;
      --link-color: #4a76ee;
      --background-color: #eeeff1;
+     --cursor-pointer: pointer;
 }
 
 *{
      margin: 0;
      padding: 0;
      box-sizing: border-box;
+     font-family: "Sora", sans-serif;
 }
 
 html{
@@ -15,13 +17,17 @@ html{
 }
 
 body{
-     font-family: 'Outfit';
      background-color: var(--background-color);
 }
 
 a{
      color: var(--link-color);
      text-decoration: none;
+     cursor: var(--cursor-pointer);
+}
+
+a:hover {
+    cursor: var(--cursor-pointer);
 }
 
 /*NAVBAR*/
@@ -30,28 +36,402 @@ nav{
      justify-content: space-between;
      align-items: center;
      padding: 0 50px;
-     height: 80px;
-     background-color: #EEB2A9;
+     height: 60px;
+     background-color: #0D1B57;
+     color: #E8E6DF;
 }
 
 nav .left a{
-     color: var(--text-color_);
+     color: var(--background-color);
      font-size: 22px;
      font-weight: 600;
 }
 
 nav .right a{
-     color: var(--text-color_);
+     color: var(--background-color);
      margin: 0 10px;
 }
 
 nav  .right a:last-child{
-     color: var(--background-color);
-     background-color: var(--text-color);
+     color: var(--text-color);
+     background-color: var(--background-color);
      padding: 5px 15px;
      border-radius: 5px;
 }
 
 nav .right a span{
      margin-left: 5px;
+}
+
+#aboutme {
+    display: flex; /* Enables flexbox */
+    padding: 120px;
+    margin-left: 200px;
+    background-color: #E8DBED;
+}
+
+/* Styling the image */
+#aboutme img {
+    width: 200px;
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 50%; /* Makes image circular */
+    margin-right: 20px; /* Space between image and text */
+}
+
+/* Styling the text */
+#aboutme .aboutme_text {
+    text-align: left;
+    flex: 1; /* Allows text to take remaining space */
+}
+
+/* Styling "Hello" */
+#aboutme h2 {
+    font-size: 2rem;
+    margin-bottom: 5px; /* Small gap between "Hello" and the next line */
+}
+
+/* Styling "Allow me to introduce myself" */
+#aboutme h3 {
+    font-size: 1.5rem;
+    font-weight: normal; /* Adjust weight if needed */
+    margin-bottom: 15px; /* Space before paragraph */
+}
+
+
+
+
+#skills{
+     padding: 40px 0 80px 10px;
+     background-color: #E8F2FF;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     text-align: center;
+}
+
+#projects{
+     padding: 80px 0 40px 80px;
+     background-color: #D2B4DC;
+}
+
+/*SKILLS*/
+.wrapper {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+ 
+ .wrapper i {
+     height: 50px;
+     width: 50px;
+     background: #EACFCC;
+     text-align: center;
+     line-height: 50px;
+     border-radius: 50%;
+     cursor: pointer;
+     position: absolute;
+     top: 50%;
+     font-size: 1.25 rem;
+     transform: translateY(-50%);
+     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+ 
+ }
+ 
+ .wrapper i:first-child {
+     left: -22px;
+ 
+ }
+ 
+ .wrapper i:last-child {
+     right: -22px;
+ 
+ }
+ 
+ .wrapper .carousel {
+     display: grid;
+     grid-auto-flow: column;
+     grid-auto-columns: calc((100% / 3) - 12px);
+     gap: 16px;
+     overflow-x: auto;
+     scroll-snap-type: x mandatory;
+     scroll-behavior: smooth;
+     scrollbar-width: 0;
+ }
+ 
+ .carousel::-webkit-scrollbar {
+     display: none;
+ }
+ 
+ .carousel :where(.card, .img) {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ .carousel.dragging {
+     scroll-snap-type: none;
+     scroll-behavior: auto;
+ }
+ 
+ .carousel.no-transition {
+     scroll-behavior: auto;
+ }
+ 
+ .carousel.dragging .card {
+     cursor: grab;
+     user-select: none;
+ }
+ 
+ .carousel .card {
+     scroll-snap-align: start;
+     height: 340px;
+     list-style: none;
+     background: #fff;
+     border-radius: 8px;
+     display: flex;
+     cursor: pointer;
+     width: 98%;
+     padding-bottom: 15px;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+ }
+ 
+ .card .simg {
+     width: 145px;
+     height: 145px;
+     border-radius: 50%;
+ 
+ }
+ 
+ .card .simg img {
+     width: 140px;
+     height: 140px;
+     object-fit: cover;
+     border-radius: 50%;
+     border: 4px solid #fff;
+ }
+ 
+ .card h2 {
+     font-weight: 500;
+     font-size: 1.56rem;
+     margin: 30px 0 5px;
+ }
+ 
+ .card span {
+     color: #6a6d78;
+     font-size: 1.31rem;
+ 
+ }
+
+.arrow {
+    color: black; /* Default arrow color */
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+ 
+ @media screen and (max-width: 900px) {
+     .wrapper .carousel {
+         grid-auto-columns: calc((100% / 2) - 9px);
+ 
+     }
+ }
+ 
+ /*PROJECTS*/
+ .projects-container {
+    display: flex;
+    flex-direction: column; /* Stacks projects vertically */
+    align-items: center; /* Centers them */
+    gap: 20px; /* Adds spacing */
+    padding: 20px;
+    width: 100%;
+}
+
+.portfolio, .valentine, .database {
+    display: flex; /* Enables side-by-side layout */
+    align-items: center; /* Aligns image and text */
+    width: 100%; /* Stretches across the page */
+    max-width: 1200px; /* Prevents it from being too wide */
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left; /* Aligns text to the left */
+    transition: transform 0.3s ease;
+}
+
+.portfolio:hover, .valentine:hover, .database:hover {
+    transform: translateY(-5px);
+}
+
+/* Image Styling */
+.pimg {
+    width: 150px; /* Makes the image smaller */
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px; /* Adds spacing between image and text */
+}
+
+/* Text Content */
+.project-info {
+    flex: 1; /* Makes text take the remaining space */
+}
+
+/* Project Title */
+.project {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Project Description */
+.pdescription {
+    font-size: 1rem;
+    color: #555;
+    font-weight: bold;
+}
+
+/* List Styles */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    font-size: 0.95rem;
+    color: #666;
+    padding: 5px 0;
+}
+
+/* Button Styling */
+button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Education Section Styling */
+#education {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.education-item {
+    background-color: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.education-item h2 {
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.education-item p {
+    color: #555;
+    font-size: 1rem;
+}
+
+.education-item em {
+    color: #007bff;
+    font-style: normal;
+}
+
+#experience {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+}
+
+.timeline-item {
+    position: relative;
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    background-color: #007bff;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.timeline-content {
+    padding-left: 20px;
+}
+
+.date {
+    font-weight: bold;
+    color: #007bff;
+    display: block;
+    margin-top: 10px;
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+/* Additional styling for the contact and resume section */
+footer p a {
+    color: #007bff;
+}
+
+footer p a:hover {
+    color: #0056b3;
 }
