@@ -45,16 +45,16 @@
         <main>
             <!--SECTION 1: About me-->
             <section id="aboutme">
-                <h1 id="aboutme_text"><strong>hello! <br> 
+                <h1 id="aboutme"><strong>hello! <br> 
                     welcome to andree's portfolio</strong></h1>
-                <h3 id="aboutme_text">allow me to introduce myself.</h3>
+                <h2 id="aboutme">allow me to introduce myself.</h2>
                 <img src="images/icon.jpg" alt="pfp">
             </section>
             
             <!--SECTION 2: Skills-->
             <section id="skills">
-                <h1>My Skills</h1>
-                <h3>Programming Languages and Technology</h3>
+                <h1 id="skills_text">My Skills</h1>
+                <h2>Programming Languages and Technology</h2>
 
                 <div class="wrapper">
                     <i id="left" class="fa-solid fa-angle-left"></i>
@@ -108,78 +108,93 @@
 
             </section>
 
-            
+        
             <!--SECTION 3: Projects-->
             <section id="projects">
                 <h1>Projects</h1>
-                <h3>Cool stuff I've been working on</h3>
-                <div class="projects-container">
-                    <div class="portfolio">
-                        <img src="images/nekoatsume1.jpeg" alt="n1" draggable="false" class="pimg">
+                <h2>Cool stuff I've been working on</h2>
 
-                        <h2 class="project">This website!</h2>
-                        <p class="pdescription">Technology used:</p>
-                        <ul>
-                            <li>Programming language: HTML, CSS, JavaScript</li>
-                            <li>Framework: Angular</li>
-                        </ul>
-                        <button>View on GitHub</button>
+                <div class="projects-container">
+
+                    <div class="portfolio">
+                        <div class="project-info">
+                            <h3 class="project">This website!</h3>
+                            <p class="pdescription">Technology used:</p>
+                            <ul>
+                                <li>Programming language: HTML, CSS, JavaScript</li>
+                                <li>Framework: Angular</li>
+                                <li>Personal portfolio (what you're looking at right now)</li>
+                            </ul>
+                            <a href="https://github.com/cs364-groupwork/Movies" target="_blank"><button>View on GitHub</button></a>
+                        </div>
+                        <img src="images/nekoatsume1.jpeg" alt="n1" draggable="false" class="pimg">
                     </div>
 
                     <div class="valentine">
+                        <div class="project-info">
+                            <h3 class="project">Valentine's day website</h3>
+                            <p class="pdescription">Technology used:</p>
+                            <ul>
+                                <li>Programming language: HTML, CSS, JavaScript</li>
+                                <li>Framework: Angular</li>
+                                <li>(Forcibly) asks the user out on a date</li>
+                            </ul>
+                            <a href="https://github.com/andreelinyx/valentines" target="_blank"><button>View on GitHub</button></a>
+                        </div>
                         <img src="images/nekoatsume2.jpeg" alt="n1" draggable="false" class="pimg">
-                        <h2 class="project">Valentine's day website</h2>
-                        <p class="pdescription">Technology used:</p>
-                        <ul>
-                            <li>Programming language: HTML, CSS, JavaScript</li>
-                            <li>Framework: Angular</li>
-                        </ul>
-                        <button>View on GitHub</button>
                     </div>
 
                     <div class="database">
+                        <div class="project-info">
+                            <h3 class="project">Academic project - database</h3>
+                            <p class="pdescription">Technology used:</p>
+                            <ul>
+                                <li>Programming language: Java, MySQL</li>
+                                <li>Other tech: GitHub</li>
+                                <li>School project - creating a database to be queried</li>
+                            </ul>
+                            <a href="https://github.com/andreelinyx/portfolio" target="_blank"><button>View on GitHub</button></a>
+                        </div>
                         <img src="images/nekoatsume3.jpeg" alt="n1" draggable="false" class="pimg">
-                        <h2 class="project">Academic project - database</h2>
-                        <p class="pdescription">Technology used:</p>
-                        <ul>
-                            <li>Programming language: Java, MySQL</li>
-                            <li>Other tech: GitHub</li>
-                        </ul>
-                        <button>View on GitHub</button>
                     </div>
                 </div>
             </section>
 
-            <!--SECTION 4: Experience-->
+            <!-- SECTION 4: Experience -->
             <section id="experience">
-                <h1>Experience</h1>
+                <h1>My Experience</h1>
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-content">
                             <h2>Social Media Manager - CS Department</h2>
-                            <p>Managed official social media accounts, created content, and engaged with students.</p>
-                            <span class="date">2024 - Present</span>
+                            <p><strong>University of Wisconsin-La Crosse</strong></p>
+                            <p>September 2024 - Present</p>
+                            <p>Managed official social media accounts, created content, and engaged with the student community.</p>
                         </div>
                     </div>
-            
+
                     <div class="timeline-item">
                         <div class="timeline-content">
-                            <h2>Peer Tutor - Computer Science</h2>
-                            <p>Assisted students with Java, data structures, and algorithms.</p>
-                            <span class="date">2023 - 2024</span>
+                            <h2>English Tutor</h2>
+                            <p><strong>KUMON Malaysia - Bandar Puteri Branch</strong></p>
+                            <p>March 23 - April 2024</p>
+                            <p>Developed lesson plans for students and fostered an engaging learning environment.</p>
                         </div>
                     </div>
-            
+
                     <div class="timeline-item">
                         <div class="timeline-content">
-                            <h2>Intern - Software Development</h2>
-                            <p>Developed full-stack applications and worked on database optimization.</p>
-                            <span class="date">2022</span>
+                            <h2>Student Union President</h2>
+                            <p><strong>Methodist College Kuala Lumpur</strong></p>
+                            <p>Jan 2023 - May 2024</p>
+                            <p>Led the student body, organized weekly meetings of the Student Union and created a sense of community 
+                                among students through events and activities.
+                            </p>
                         </div>
                     </div>
                 </div>
             </section>
-            
+
 
             <!--SECTION 5: Education-->
             <section id="education">
@@ -188,25 +203,35 @@
                     <h2>Bachelor of Science in Computer Science</h2>
                     <p><strong>University of Wisconsin-La Crosse</strong></p>
                     <p><em>Expected Graduation: May 2025</em></p>
-                    <p>Relevant coursework: Data Structures, Algorithms, Web Development, Database Management, and Software Engineering.</p>
+                    <p>Minor in music</p>
+                    <p>GPA: 3.62</p>
+                    <p>Relevant coursework: Abstract Data Structures, Discrete Computational Structures, Database Management Systems</p>
+                </div>
+
+                <div class="education-item">
+                    <h2>American Degree Transfer Program</h2>
+                    <p><strong>Methodist College Kuala Lumpur</strong></p>
+                    <p><em>Graduated: July 2024</em></p>
+                    <p>GPA: 3.52</p>
+                    <p>ADTP Student Union President, Dean's List, Student Creative Team</p>
                 </div>
 
                 <div class="education-item">
                     <h2>High School Diploma</h2>
-                    <p><strong>XYZ High School</strong></p>
-                    <p><em>Graduated: June 2021</em></p>
-                    <p>GPA: 4.0, President of Computer Science Club, Captain of the Robotics Team.</p>
+                    <p><strong>Sri Kuala Lumpur Internaional School</strong></p>
+                    <p><em>Graduated: December 2022</em></p>
+                    <p>IGCSE 9A* 1A, Deputy Head Prefect, School Band Vice President, School Magazine Head Editor</p>
                 </div>
             </section>
 
 
             <!-- Footer -->
             <footer>
-                <p>&copy; Thank you for checking out my website! Here is more information about me.</p>
+                <p>Thank you for checking out my website! Here is more information about me.</p>
                 
-                <p>Download my <a href="Andree_Resume.pdf" target="_blank">Resume</a></p>
+                <p>View my <a href="Andree_Resume.pdf" target="_blank">Resume</a></p>
                 
-                <p>Contact me at: <a href="andree.linyx@gmail.com"></a></p>
+                <p>Contact me at: <a href="mailto:andree.linyx@gmail.com">andree.linyx@gmail.com</a></p>
 
                 <p>Follow me on <a href="https://www.linkedin.com/in/andree-lin-56196a284/" target="_blank">LinkedIn</a> | <a href="https://github.com/andreelinyx" target="_blank">GitHub</a></p>
             </footer>
