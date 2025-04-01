@@ -1,10 +1,12 @@
+/* define root variables for theme colors and cursor */
 :root{
      --text-color: #1a1c20;
      --link-color: #4a76ee;
-     --background-color: #eeeff1;
+     --background-color: #FCDED5;
      --cursor-pointer: pointer;
 }
 
+/* global reset */
 *{
      margin: 0;
      padding: 0;
@@ -12,14 +14,17 @@
      font-family: "Sora", sans-serif;
 }
 
+/* smooth scrolling behavior */
 html{
      scroll-behavior: smooth;
 }
 
+/* set background color for the page */
 body{
      background-color: var(--background-color);
 }
 
+/* link styling */
 a{
      color: var(--link-color);
      text-decoration: none;
@@ -30,103 +35,115 @@ a:hover {
     cursor: var(--cursor-pointer);
 }
 
-/*NAVBAR*/
+/* NAVBAR section */
 nav{
      display: flex;
      justify-content: space-between;
      align-items: center;
      padding: 0 50px;
      height: 60px;
-     background-color: #0D1B57;
-     color: #E8E6DF;
+     background-color: #F8AFCE;
 }
 
+/* navbar left side (name) */
 nav .left a{
-     color: var(--background-color);
+     color: var(--text-color);
      font-size: 22px;
      font-weight: 600;
 }
 
+/* navbar right side (social media) */
 nav .right a{
-     color: var(--background-color);
+     color: var(--text-color);
      margin: 0 10px;
 }
 
+/* navbar right side (email) */
 nav  .right a:last-child{
-     color: var(--text-color);
-     background-color: var(--background-color);
+     color: var(--background-color);
+     background-color: var(--text-color);
      padding: 5px 15px;
      border-radius: 5px;
 }
 
+/* space between icon and text */
 nav .right a span{
      margin-left: 5px;
 }
 
+/* ABOUT ME section */
 #aboutme {
-    display: flex; /* Enables flexbox */
-    padding: 120px;
-    margin-left: 200px;
-    background-color: #E8DBED;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    background-color: #F7F1E7;
+    text-align: center; 
+    padding: 70px;
 }
 
-/* Styling the image */
+/* profile image */
 #aboutme img {
     width: 200px;
-    height: auto; /* Maintains aspect ratio */
-    border-radius: 50%; /* Makes image circular */
-    margin-right: 20px; /* Space between image and text */
+    height: auto; 
+    border-radius: 50%; 
 }
 
-/* Styling the text */
+/* styling the text */
 #aboutme .aboutme_text {
-    text-align: left;
-    flex: 1; /* Allows text to take remaining space */
+    width: 100%;
 }
 
-/* Styling "Hello" */
-#aboutme h2 {
+/* styling "Hello" */
+#aboutme h1 {
     font-size: 2rem;
-    margin-bottom: 5px; /* Small gap between "Hello" and the next line */
+    font-weight: bold;
 }
 
-/* Styling "Allow me to introduce myself" */
-#aboutme h3 {
+/* styling "Allow me to introduce myself" */
+#aboutme h2 {
     font-size: 1.5rem;
-    font-weight: normal; /* Adjust weight if needed */
-    margin-bottom: 15px; /* Space before paragraph */
+    font-weight: normal;
+    margin-bottom: 15px; 
 }
 
 
-
-
+/* SKILLS section */
 #skills{
      padding: 40px 0 80px 10px;
-     background-color: #E8F2FF;
+     background-color: #B9D4E9;
      display: flex;
      justify-content: center;
      flex-direction: column;
      text-align: center;
 }
 
-#projects{
-     padding: 80px 0 40px 80px;
-     background-color: #D2B4DC;
+/* styling "My Skills" */
+#skills h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-/*SKILLS*/
+/* styling "Programming Languages and Technology" */
+#skills h2 {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 30px; 
+}
+
+/* skills wrapper for cards */
 .wrapper {
     max-width: 1100px;
     width: 100%;
     margin: 0 auto;
     position: relative;
 }
-
  
+/* wrapper and arrows */
  .wrapper i {
      height: 50px;
      width: 50px;
-     background: #EACFCC;
+     background: #FDDED2;
      text-align: center;
      line-height: 50px;
      border-radius: 50%;
@@ -135,20 +152,21 @@ nav .right a span{
      top: 50%;
      font-size: 1.25 rem;
      transform: translateY(-50%);
-     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
- 
+     box-shadow: 5 10px 10px rgba(0, 0, 0, 0.23);
+     z-index: 100;
  }
  
+ /* left arrow */
  .wrapper i:first-child {
      left: -22px;
- 
  }
  
+ /* right arrow */
  .wrapper i:last-child {
      right: -22px;
- 
  }
  
+ /* skills carousel layout */
  .wrapper .carousel {
      display: grid;
      grid-auto-flow: column;
@@ -160,52 +178,35 @@ nav .right a span{
      scrollbar-width: 0;
  }
  
+ /* hide scrollbar */
  .carousel::-webkit-scrollbar {
      display: none;
  }
  
- .carousel :where(.card, .img) {
-     display: flex;
-     align-items: center;
-     justify-content: center;
- }
- 
- .carousel.dragging {
-     scroll-snap-type: none;
-     scroll-behavior: auto;
- }
- 
- .carousel.no-transition {
-     scroll-behavior: auto;
- }
- 
- .carousel.dragging .card {
-     cursor: grab;
-     user-select: none;
- }
- 
+ /* styling for skill card */
  .carousel .card {
      scroll-snap-align: start;
      height: 340px;
      list-style: none;
-     background: #fff;
+     background: rgba(255, 255, 255, 0.6); /* White with 60% opacity */
      border-radius: 8px;
      display: flex;
-     cursor: pointer;
      width: 98%;
      padding-bottom: 15px;
      align-items: center;
      justify-content: center;
      flex-direction: column;
+     backdrop-filter: blur(10px); /* Optional: Adds a blur effect to enhance the translucent look */
  }
- 
+
+ /* circular skill images */
  .card .simg {
      width: 145px;
      height: 145px;
      border-radius: 50%;
- 
  }
  
+ /* skill images inside the circular container */
  .card .simg img {
      width: 140px;
      height: 140px;
@@ -214,86 +215,118 @@ nav .right a span{
      border: 4px solid #fff;
  }
  
+ /* skill title styling */
  .card h2 {
      font-weight: 500;
+     color: var(--text-color);
      font-size: 1.56rem;
      margin: 30px 0 5px;
  }
  
+ /* skill description styling */
  .card span {
-     color: #6a6d78;
-     font-size: 1.31rem;
+     color: var(--text-color);
+     font-size: 1.3rem;
  
  }
 
+ /* arrow button styling */
 .arrow {
-    color: black; /* Default arrow color */
+    color: black; 
     cursor: pointer;
     transition: opacity 0.3s;
-}
- 
- @media screen and (max-width: 900px) {
-     .wrapper .carousel {
-         grid-auto-columns: calc((100% / 2) - 9px);
- 
-     }
- }
- 
- /*PROJECTS*/
- .projects-container {
-    display: flex;
-    flex-direction: column; /* Stacks projects vertically */
-    align-items: center; /* Centers them */
-    gap: 20px; /* Adds spacing */
-    padding: 20px;
-    width: 100%;
+    position: absolute;
 }
 
+ /* PROJECTS section*/
+ #projects{
+    padding: 50px 0 40px 80px;
+    background-color: #F7F1E7;
+}
+
+/* styling "Projects" */
+#projects h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* styling "Cool stuff I've been working on" */
+#projects h2 {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 30px; 
+}
+
+ 
+/* container for all projects */
+.projects-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
+    padding: 20px;
+    width: 100%;
+
+}
+
+/* indiviual project blocks (portfolio, valentine, database) */
 .portfolio, .valentine, .database {
-    display: flex; /* Enables side-by-side layout */
-    align-items: center; /* Aligns image and text */
-    width: 100%; /* Stretches across the page */
-    max-width: 1200px; /* Prevents it from being too wide */
-    background: #ffffff;
+    display: flex; 
+    flex-direction: row-reverse;
+    align-items: center; 
+    width: 100%; 
+    max-width: 1200px; 
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    text-align: left; /* Aligns text to the left */
+    text-align: left; 
     transition: transform 0.3s ease;
+    background: rgba(255, 255, 255, 0.6); /* White with 60% opacity */
+    backdrop-filter: blur(10px); /* Optional: Adds a blur effect to enhance the translucent look */
 }
 
+/* hover effect for projects */
 .portfolio:hover, .valentine:hover, .database:hover {
     transform: translateY(-5px);
 }
 
-/* Image Styling */
+/* ensures text is stacked */
+.project-info{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-left: 10px;
+}
+
+/* image styling */
 .pimg {
-    width: 150px; /* Makes the image smaller */
+    width: 150px; 
     height: auto;
     border-radius: 8px;
-    margin-right: 20px; /* Adds spacing between image and text */
+    margin-left: 20px;
 }
 
-/* Text Content */
+/* project text container */
 .project-info {
-    flex: 1; /* Makes text take the remaining space */
+    flex: 1; 
 }
 
-/* Project Title */
+/* project title */
 .project {
     font-size: 1.5rem;
     color: #333;
     margin: 10px 0;
 }
 
-/* Project Description */
+/* project description */
 .pdescription {
     font-size: 1rem;
     color: #555;
     font-weight: bold;
 }
 
-/* List Styles */
+/* list styles */
 ul {
     list-style: none;
     padding: 0;
@@ -305,10 +338,10 @@ li {
     padding: 5px 0;
 }
 
-/* Button Styling */
+/* button Styling */
 button {
-    background-color: #007bff;
-    color: #ffffff;
+    background-color: #FCDED4;
+    color: var(--text-color);
     border: none;
     padding: 10px 15px;
     margin-top: 10px;
@@ -319,14 +352,102 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #83A4F3;
 }
 
-/* Education Section Styling */
+/* EXPERIENCE section */
+#experience {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #B9D4E9;
+}
+
+#experience h1{
+    margin-bottom: 20px;
+}
+
+/* timeline Container */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* timeline item */
+.timeline-item {
+    position: relative;
+    padding: 20px;
+    width: 45%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.6); /* White with 60% opacity */
+    backdrop-filter: blur(10px); /* Optional: Adds a blur effect to enhance the translucent look */
+}
+
+/* timeline content */
+.timeline-content {
+    padding: 20px;
+    text-align: left;
+}
+
+/* timeline title */
+.timeline-content h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* timeline text */
+.timeline-content p {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* vertical timeline line */
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background: #F9AFCF;
+    transform: translateX(-50%);
+}
+
+/* left and right alignment */
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 55%;
+}
+
+/* circular indicator */
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 100%;
+    width: 15px;
+    height: 15px;
+    background: #F9AFCF;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+/* adjust indicator for right side */
+.timeline-item:nth-child(even)::before {
+    left: 0;
+    transform: translateX(-50%);
+}
+
+/* EDUCATION section */
 #education {
     text-align: center;
     padding: 50px 20px;
-    background-color: #f4f4f4;
+    background-color: #F7F1E7;
 }
 
 .education-item {
@@ -339,6 +460,8 @@ button:hover {
     margin-left: auto;
     margin-right: auto;
     text-align: left;
+    background: rgba(255, 255, 255, 0.6); /* White with 60% opacity */
+    backdrop-filter: blur(10px); /* Optional: Adds a blur effect to enhance the translucent look */
 }
 
 .education-item h2 {
@@ -352,71 +475,21 @@ button:hover {
 }
 
 .education-item em {
-    color: #007bff;
+    color: #444991;
     font-style: normal;
 }
 
-#experience {
-    text-align: center;
-    padding: 50px 0;
-}
 
-.timeline {
-    position: relative;
-    max-width: 800px;
-    margin: auto;
-}
-
-.timeline-item {
-    position: relative;
-    background: #ffffff;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
-
-.timeline-item::before {
-    content: "";
-    position: absolute;
-    left: -20px;
-    top: 50%;
-    width: 12px;
-    height: 12px;
-    background-color: #007bff;
-    border-radius: 50%;
-    transform: translateY(-50%);
-}
-
-.timeline-content {
-    padding-left: 20px;
-}
-
-.date {
-    font-weight: bold;
-    color: #007bff;
-    display: block;
-    margin-top: 10px;
-}
-
-
-/* Footer Styling */
+/* footer Styling */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #C8CD90;
+    color: var(--text-color);
     padding: 20px;
     text-align: center;
     position: relative;
     bottom: 0;
     width: 100%;
     font-size: 0.9rem;
-}
-
-footer a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 10px;
 }
 
 footer a:hover {
@@ -427,7 +500,7 @@ footer p {
     margin: 10px 0;
 }
 
-/* Additional styling for the contact and resume section */
+/* additional styling for the contact and resume section */
 footer p a {
     color: #007bff;
 }
